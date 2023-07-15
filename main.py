@@ -151,7 +151,7 @@ async def on_message(message):
         if message.author.guild_permissions.administrator or message.author.id == "294478798152269824":
             await bot.process_commands(message)  # Allow the admin/owner to use commands in any channel
         else:
-            # Check if the command is being sent in the correct channel
+            # Check if the command is being sent in the correct channel (tally with your channel name)
             if message.channel.name != "bot-commands":
                 # Delete the command message
                 await message.delete()
@@ -167,7 +167,7 @@ async def on_message(message):
 
             return  # Return after handling the command
 
-    # Check if the user is sending images in the general chatroom
+    # Check if the user is sending images in the general chatroom (tally with your channel name)
     if message.channel.name == "borak2" and len(message.attachments) > 0:
         # Delete the message
         await message.delete()
@@ -397,4 +397,4 @@ async def clear(ctx):
 
 
 
-bot.run('MTA1OTEyMTE5NDMyODE0NjAzMA.G928U-.CrfGz3wp8mzEahHQpc1MDjArjrsHnNpCF0ne0E')
+bot.run('INSERT BOT TOKEN HERE')
